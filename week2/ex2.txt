@@ -1,0 +1,75 @@
+    1  mkdir ~/week1
+    2  apt-get install gcc
+    3  yes
+    4  s
+    5  sudo apt-get install gcc
+    6  mkdir ~/week1
+    7  ls /usr/bin | grep gcc | sort -r > ~/week1/ex1.txt
+    8  github init
+    9  init github
+   10  ls /usr/bin
+   11  grep gcc
+   12  ~/week1
+   13  nano ~/week1/ex1.txt
+   14  git init
+   15  nano ~/week1/ex1.txt
+   16  git add -A
+   17  git commit -m "week1"
+   18  git config --global molberte@mail.ru
+   19  git config user.email molberte@mail.ru
+   20  git config user.name molberte
+   21  git commit -m "week1"
+   22  git remote add origin git@github.com:molberte/OS_labs.git
+   23  git push -u origin master
+   24  git init
+   25  cd
+   26  cd ~/week1
+   27  git init
+   28  git add -A
+   29  git commit -m "week1"
+   30  git config user.email molberte@mail.ru
+   31  git init
+   32  git commit -m “week1”
+   33  git remote add origin git@github.com:molberte/OS_labs.git
+   34  git push -u origin master
+   35  c:\users\kseniya
+   36  cd c:\users\kseniya
+   37  cd c:/users/kseniya
+   38  cd C:\Users\kseniya
+   39  git config
+   40  ls
+   41  ls week1
+   42  ;s
+   43  mkdir os_labs
+   44  ls
+   45  mv week1 os_labs/
+   46  ls
+   47  cd os_labs/
+   48  ls
+   49  ls week1/
+   50  ls
+   51  git init
+   52  ls
+   53  ls week1/ -a
+   54  ls -a
+   55  git add .
+   56  cd week1/
+   57  ls
+   58  rm --help
+   59  rm .git -r -f
+   60  ls
+   61  ls -a
+   62  cd ..
+   63  ls
+   64  ls -a
+   65  git add .
+   66  git commit -m "First lab"
+   67  git config --global user.email "molberte@mail.ru"
+   68  git config --global user.name "molberte"
+   69  git commit -m "First lab"
+   70  git push https://github.com/molberte/OS_labs
+   71  git push --set-upstream https://github.com/molberte/OS_labs master
+   72  ls
+   73  cd week1
+   74  ls
+   75  history > ex2.txt
