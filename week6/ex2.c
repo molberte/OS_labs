@@ -7,6 +7,7 @@ struct process {
     int turn_around_time;
     int waiting_time;
     int number;
+    int start;
 };
 
 void swap(struct process *xp, struct process *yp) {
@@ -14,14 +15,6 @@ void swap(struct process *xp, struct process *yp) {
   temp = *xp;
   *xp = *yp;
   *yp = temp;
-}
-
-void bubbleSort(struct process arr[], int n) {
-  int i, j;
-  for (i = 0; i < n - 1; i++)
-    for (j = 0; j < n - i - 1; j++)
-      if (arr[j].arrival_time > arr[j + 1].arrival_time)
-        swap( & arr[j], & arr[j + 1]);
 }
 
 void printArray(struct process arr[], int size) {
@@ -35,7 +28,6 @@ void printArray(struct process arr[], int size) {
 
   }
 }
-
 
 int main(int argc, char * argv[]) {
 
@@ -51,6 +43,7 @@ int main(int argc, char * argv[]) {
       0,
       0,
       0,
+      0,
       0
     };
     processes[n] = pr;
@@ -60,10 +53,26 @@ int main(int argc, char * argv[]) {
 	for (int i = 0; i < n; i++) {
     	scanf("%d %d", &processes[i].arrival_time, &processes[i].burst_time );
 	}
-
-  bubbleSort(processes, n);
-
-  int compl_sum = 0;
+	
+	int time = 0;
+	int shortest;
+	for (int i = 0; i < n; i++) {
+		shortest = i;
+		for (int j = i + 1; j < n; j++) {
+			if (processes[j].arrival_time <= time && processes[j].burst_time < processes[shortest].burst_time)
+				shortest = j;
+		}
+		
+		processes[shortest].start = time;
+		time += processes[shortest].burst_time;
+		
+		//we are not in that process anymore if
+		if (shortest != i) {
+			swap(&processes[shortest], &processes[i]);
+		}
+		
+	}
+	  int compl_sum = 0;
   double avg_tat = 0;
   double avg_wait = 0;
   for (int i = 0; i < n; i++) {
@@ -89,5 +98,7 @@ int main(int argc, char * argv[]) {
   printf("Average TAT: %f\n", avg_tat / n);
   printf("Total CT: %d\n", total_completion_time);
 
-	return 0;
+
+  return 0;
+
 }
