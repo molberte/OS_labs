@@ -1,0 +1,3 @@
+Physical address exists directly in the hardware(memory), while virtual address is a slice upon the physical memory and it is used to reference to physical memory space unit.
+
+Virtual addresses are mapped dynamically. Virtual memory could be larger than physical. 
