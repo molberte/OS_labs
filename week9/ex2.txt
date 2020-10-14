@@ -1,0 +1,5 @@
+Sequence like:
+ 1 1 1 1 1 ... 1 
+will give us maximum hit/miss ratio, because every new page will be in the page frame
+Hit will increase, Miss will not change 
+all in all, Hit/Miss ration will be increased
