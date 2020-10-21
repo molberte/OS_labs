@@ -1,0 +1,14 @@
+  545  link ../week1/file.txt _ex2.txt
+  546  ls -li
+total 0
+91197892454254670 -rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1.txt
+91197892454254670 -rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_1.txt
+91197892454254670 -rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_2.txt
+30680772461488959 -rw-r--r-- 2 kseny kseny   0 Oct 21 22:33 _ex2.txt
+10133099161811903 -rw-r--r-- 1 kseny kseny 342 Oct 21 22:30 ex1.txt
+  547  find .. -inum 30680772461488959
+../week1/file.txt
+../week10/_ex2.txt
+  548  find .. -inum 30680772461488959 -exec rm {} \;
+  549  find .. -inum 30680772461488959
+  550  history 6 > ex2.txt

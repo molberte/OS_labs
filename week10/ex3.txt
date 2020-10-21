@@ -1,0 +1,25 @@
+  552  touch _ex3.txt
+  553  ls -l
+total 0
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1.txt
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_1.txt
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_2.txt
+-rw-r--r-- 1 kseny kseny   0 Oct 21 22:49 _ex3.txt
+-rw-r--r-- 1 kseny kseny 342 Oct 21 22:30 ex1.txt
+-rw-r--r-- 1 kseny kseny 605 Oct 21 22:47 ex2.txt
+  554  chmod +x _ex3.txt
+  555  chmod -R g=u _ex3.txt
+  556  ls -l
+total 0
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1.txt
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_1.txt
+-rw-r--r-- 3 kseny kseny   0 Oct 21 22:20 _ex1_2.txt
+-rwxrwxr-x 1 kseny kseny   0 Oct 21 22:49 _ex3.txt
+-rw-r--r-- 1 kseny kseny 342 Oct 21 22:30 ex1.txt
+-rw-r--r-- 1 kseny kseny 605 Oct 21 22:47 ex2.txt
+  557  history 6 > ex3.txt
+
+
+660 means that owner and group can read and write. Other can not do anything.
+775 means that owner and group can read, write, execute. Other can read and execute.
+777 means that all can read, write, and execute
